@@ -11,7 +11,6 @@ type UpdateProfileResponse = {
 
 export const updateProfile = async (data: UpdateProfileInput): Promise<UserSession> => {
     const res = await fetcher.patch<UpdateProfileResponse>(`${BASE_URL}/update`, data);
-    console.log("API RESPONSE UPDATE:", res);
     return res.user;
 };
 

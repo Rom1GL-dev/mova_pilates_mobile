@@ -39,13 +39,11 @@ export function ProfileUpdateForm({ setIsLoading }: Props) {
 
         updateProfileMutation.mutate(data, {
             onSuccess: (updatedUser) => {
-                console.log("SUCCESS MUTATION", updatedUser);
                 setIsLoading?.(false);
                 setUser(updatedUser);
                 router.replace(ROUTES.profile.index as never);
             },
             onError: (err) => {
-                console.log("ERROR MUTATION", err);
                 setIsLoading?.(false);
             },
         });

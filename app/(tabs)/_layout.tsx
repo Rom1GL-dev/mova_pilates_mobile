@@ -58,9 +58,13 @@ export default function TabsLayout() {
                             ),
                         }}
                     />
-                    <Tabs.Screen name="profile/settings" options={{ href: null }} />
+                    <Tabs.Screen name="forget-password" options={{ href: null }} />
+
+                    <Tabs.Screen name="profile/settings/index" options={{ href: null }} />
+                    <Tabs.Screen name="profile/settings/update-email/index" options={{ href: null }} />
+                    <Tabs.Screen name="profile/settings/update-password/index" options={{ href: null }} />
+
                     <Tabs.Screen name="profile/update" options={{ href: null }} />
-                    <Tabs.Screen name="profile/courses" options={{ href: null }} />
                 </Tabs>
             </ProtectedRoute>
         </AuthProvider>

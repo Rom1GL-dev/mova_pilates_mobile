@@ -1,7 +1,7 @@
 import { useAuth, UserSession } from "@/providers/auth-provider";
 import { Text, View } from "react-native";
 import { ProfileRowItem } from "@/features/profile/components/profile-row-item";
-import { Calendar, LogOut, Settings, User } from "lucide-react-native";
+import { LogOut, Settings, User } from "lucide-react-native";
 import { router } from "expo-router";
 import { ROUTES } from "@/config/routes.config";
 import { appConfig } from "@/config/app.config";
@@ -35,12 +35,6 @@ export function ProfileRows({ user, setIsLoading }: Props) {
                     icon={<User size={20} color="#b28053" />}
                     label="Modifier mon profil"
                     onPress={() => router.replace(ROUTES.profile.update.index)}
-                />
-
-                <ProfileRowItem
-                    icon={<Calendar size={20} color="#b28053" />}
-                    label="Mes cours"
-                    onPress={() => router.replace(ROUTES.profile.courses.index)}
                 />
 
                 <ProfileRowItem

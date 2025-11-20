@@ -77,7 +77,10 @@ export function Login() {
                     <LoginFormFields />
                 </FormProvider>
 
-                <TouchableOpacity className="items-end mb-6 mt-1">
+                <TouchableOpacity
+                    className="items-end mb-6 mt-1"
+                    onPress={() => router.navigate(ROUTES.forgetPassword.index as never)}
+                >
                     <Text className="text-[#b28053] font-medium">Mot de passe oublié ?</Text>
                 </TouchableOpacity>
 

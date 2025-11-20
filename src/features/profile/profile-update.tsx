@@ -10,7 +10,7 @@ export function ProfileUpdate() {
 
     return (
         <LayoutScreen>
-            <Title title={"Modifier mon profil"} />
+            <Title title={"Mon profil"} />
             <ProfileUpdateForm setIsLoading={setIsLoading} />
             {isLoading && (
                 <View className="absolute inset-0">
